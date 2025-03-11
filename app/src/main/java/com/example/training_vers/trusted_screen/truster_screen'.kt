@@ -1,5 +1,6 @@
-package com.example.training_vers.trusted_devices_screen
+package com.example.training_vers.trusted_screen
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,22 +28,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.training_vers.R
 import com.example.training_vers.models.PhoneModel
 import com.example.training_vers.ui.theme.Gray100
 
-
-
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TrustedDevicesScreen() {
+fun TrustedScreen() {
     Scaffold(
-//        // APPBAR //
         topBar = {
-
             TopAppBar(
                 title = {
                     Box(
@@ -72,13 +69,12 @@ fun TrustedDevicesScreen() {
                 },
             )
         }
-//        // BODY //
     ) { innerPadding ->
         LazyColumn(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
+                .padding(innerPadding),
         ) {
             val devices = listOf(
                 PhoneModel(
@@ -98,7 +94,7 @@ fun TrustedDevicesScreen() {
                 ),
             )
 
-            itemsIndexed(devices) { _, item ->
+            itemsIndexed(devices) {_, item ->
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -154,12 +150,4 @@ fun TrustedDevicesScreen() {
             }
         }
     }
-}
-
-@Preview(
-    showBackground =  true
-)
-@Composable
-fun PreviewTrustedDevicesScreen() {
-    TrustedDevicesScreen()
 }
