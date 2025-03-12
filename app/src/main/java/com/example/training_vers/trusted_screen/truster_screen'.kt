@@ -28,10 +28,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.training_vers.R
 import com.example.training_vers.models.PhoneModel
+import com.example.training_vers.trusted_devices_screen.TrustedDevicesScreen
 import com.example.training_vers.ui.theme.Gray100
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -67,6 +69,7 @@ fun TrustedScreen() {
                         )
                     }
                 },
+
             )
         }
     ) { innerPadding ->
@@ -138,6 +141,7 @@ fun TrustedScreen() {
                         ) {
                             Text(
                                 text = item.osVersion,
+                                maxLines = 1,
                                 style = TextStyle(
                                     fontWeight = FontWeight.W600,
                                     fontSize = 16.sp,
@@ -150,4 +154,12 @@ fun TrustedScreen() {
             }
         }
     }
+}
+
+@Preview(
+    showBackground =  true
+)
+@Composable
+fun PreviewTrustedDevicesScreen() {
+    TrustedScreen()
 }
