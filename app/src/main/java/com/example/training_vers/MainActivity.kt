@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.training_vers.trusted_screen.TrustedScreen
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -37,10 +36,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.training_vers.R
-import com.example.training_vers.models.PhoneModel
-import com.example.training_vers.trusted_devices_screen.TrustedDevicesScreen
-import com.example.training_vers.ui.theme.Gray100
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -144,7 +139,7 @@ fun TrustedScreen() {
                                 style = TextStyle(
                                     fontWeight = FontWeight.W600,
                                     fontSize = 12.sp,
-                                    color = Gray100
+                                    color = Color.Gray
                                 )
                             )
                         }
