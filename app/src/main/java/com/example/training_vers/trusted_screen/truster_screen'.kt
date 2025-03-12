@@ -25,6 +25,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -145,7 +146,7 @@ fun TrustedScreen() {
                                 style = TextStyle(
                                     fontWeight = FontWeight.W600,
                                     fontSize = 16.sp,
-                                    color = Gray100
+                                    color = Color.Gray
                                 )
                             )
                         }
