@@ -25,14 +25,15 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.training_vers.R
 import com.example.training_vers.models.PhoneModel
-import com.example.training_vers.ui.theme.Gray100
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
@@ -67,6 +68,7 @@ fun TrustedScreen() {
                         )
                     }
                 },
+
             )
         }
     ) { innerPadding ->
@@ -125,7 +127,7 @@ fun TrustedScreen() {
                                 style = TextStyle(
                                     fontWeight = FontWeight.W600,
                                     fontSize = 12.sp,
-                                    color = Gray100
+                                    color = Color.Gray
                                 )
                             )
                         }
@@ -138,10 +140,11 @@ fun TrustedScreen() {
                         ) {
                             Text(
                                 text = item.osVersion,
+                                maxLines = 1,
                                 style = TextStyle(
                                     fontWeight = FontWeight.W600,
                                     fontSize = 16.sp,
-                                    color = Gray100
+                                    color = Color.Gray
                                 )
                             )
                         }
@@ -150,4 +153,12 @@ fun TrustedScreen() {
             }
         }
     }
+}
+
+@Preview(
+    showBackground =  true
+)
+@Composable
+fun PreviewTrustedDevicesScreen() {
+    TrustedScreen()
 }
